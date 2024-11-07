@@ -1,0 +1,10 @@
+ server {
+        listen 80;
+        listen [::]:80;
+        root /var/www/proluh-web/html/;
+        index index.html index.htm index.nginx-debian.html;
+        server_name proluh.test;
+        location / {
+            try_files $uri $uri/ =404;
+        }
+ }
